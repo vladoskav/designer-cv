@@ -9,6 +9,7 @@ export default defineConfig({
   vite: {
       plugins: [tailwindcss()],
   },
-
+    site: 'https://vladoskav.github.io',
+    base: '/Ekaterina-Kniazeva',
   integrations: [compressor()],
 });
