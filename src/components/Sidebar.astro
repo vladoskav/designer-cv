@@ -1,25 +1,30 @@
 ---
-import { Image } from 'astro:assets';
+import {Image} from 'astro:assets';
 import Avatar from '../assets/avatar.jpg'
 import {getLangFromUrl, useTranslatedPath, useTranslations} from '../i18n/utils';
+import {languages} from "../i18n/config";
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-const translatePath = useTranslatedPath(lang);
-const langToChoose = lang === 'ru' ? 'en' : 'ru';
+const language = getLangFromUrl(Astro.url);
+const t = useTranslations(language);
+const translatePath = useTranslatedPath(language);
 ---
 <script>
 
 </script>
 
 <aside class="max-w-56 w-full h-vh text-xl sticky top-0 left-0 py-7">
-    <Image alt="Avatar" src={Avatar} formats={['webp', 'jpg']} class="rounded-full size-16 mb-5 object-cover object-top" />
+    <Image alt="Avatar" src={Avatar} formats={['webp', 'jpg']}
+           class="rounded-full size-16 mb-5 object-cover object-top"/>
     <h1 class="text-3xl tracking-[3.5%] leading-none font-bold mb-4">{t('name')}</h1>
-    <p class="tracking-[3.5%] leading-tight">{t('about')}</p>
+    <p class="tracking-[3.5%] leading-tight mb-4">{t('about')}</p>
+    <p class="tracking-[3.5%] leading-tight">{t('subAbout')}</p>
     <div class="flex w-full absolute bottom-7 left-0 justify-end gap-2 flex-col leading-tight">
-        <a href="https://hh.ru" target="_blank" class="hover:text-gray-400 transition-colors">CV</a>
-        <a href="https://t.me/@catheraneu" target="_blank" class="hover:text-gray-400 transition-colors mb-10">Telegram</a>
-        <p>Now in Kazan. <br />  Let’s work!</p>
-        <a href={translatePath('/', langToChoose)}>{langToChoose}</a>
+        <a href="https://hh.ru" target="_blank" class="hover:text-[#C2C2C2] transition-colors">{t('resume')}</a>
+        <a href="https://t.me/@catheraneu" target="_blank"
+           class="mb-10 hover:text-[#C2C2C2] transition-colors">{t('tg')}</a>
+        {Object.entries(languages).map(([lang, label]) => {
+            return <a class={`${language === lang && 'text-[#C2C2C2]'} hover:text-[#C2C2C2] transition-colors`}
+                      href={translatePath('/', lang)}>{label}</a>
+        })}
     </div>
 </aside>

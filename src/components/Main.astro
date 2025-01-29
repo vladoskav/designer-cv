@@ -1,13 +1,20 @@
 ---
-import { Image } from 'astro:assets';
+import Case from "./Case.astro";
+import {useTranslations} from "../i18n/utils";
+import {getLangFromUrl} from "../i18n/utils";
+import FirstCase from '../assets/first_case.png';
+import SecondCase from '../assets/second_case.png';
+const language = getLangFromUrl(Astro.url);
+const t = useTranslations(language);
+const cases = [
+    {image: FirstCase, description: t('firstCaseDescr'), icon: 'avito', position: t('firstPosition')},
+    {image: SecondCase, description: t('secondCaseDescr'), icon: 'avito', position: t('firstPosition')},
+]
 ---
 <main class="flex w-full w-[calc(100vw - 20rem)] h-auto overflow-scroll pr-7 py-7 scroll-smooth">
-    <div class="flex w-full flex-col gap-10">
-        <div>
-        <Image class="w-full object-cover mb-7" width={2048} height={2048} src="https://framerusercontent.com/images/vNGYKJMBFLPs9J6XCp6X6wD9s.jpg" alt="Первый проект"/>
-        <p class="pl-12"> Words is the app for a 360° vocabulary learning experience that we’re building with two super engineers. Personal project. MVP stage.</p>
-        </div>
-        <Image class="w-full object-cover" width={2048} height={2048} src="https://framerusercontent.com/images/vNGYKJMBFLPs9J6XCp6X6wD9s.jpg" alt="Первый проект"/>
-        <Image class="w-full object-cover" width={2048} height={2048} src="https://framerusercontent.com/images/vNGYKJMBFLPs9J6XCp6X6wD9s.jpg" alt="Первый проект"/>
+    <div class="flex w-full flex-col gap-30">
+        {cases.map(({image, description, icon, position}) => {
+            return <Case description={description} image={image} icon={icon} position={position}/>
+        })}
     </div>
 </main>
