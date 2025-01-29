@@ -19,12 +19,14 @@ const translatePath = useTranslatedPath(language);
     <p class="tracking-[3.5%] leading-tight mb-4">{t('about')}</p>
     <p class="tracking-[3.5%] leading-tight">{t('subAbout')}</p>
     <div class="flex w-full absolute bottom-7 left-0 justify-end gap-2 flex-col leading-tight">
-        <a href="https://hh.ru" target="_blank" class="hover:text-[#C2C2C2] transition-colors">{t('resume')}</a>
+        <a href="https://hh.ru" target="_blank" class="hover:text-[#C2C2C2] transition-colors w-fit">{t('resume')}</a>
         <a href="https://t.me/@catheraneu" target="_blank"
-           class="mb-10 hover:text-[#C2C2C2] transition-colors">{t('tg')}</a>
-        {Object.entries(languages).map(([lang, label]) => {
-            return <a class={`${language === lang && 'text-[#C2C2C2]'} hover:text-[#C2C2C2] transition-colors`}
-                      href={translatePath('/Ekaterina-Kniazeva/', lang)}>{label}</a>
-        })}
+           class="mb-10 hover:text-[#C2C2C2] transition-colors w-fit">{t('tg')}</a>
+        <div class="flex gap-7 items-center">
+            {Object.entries(languages).map(([lang, label]) => {
+                return <a class={`${language === lang && 'text-[#C2C2C2]'} hover:text-[#C2C2C2] transition-colors`}
+                          href={translatePath('/Ekaterina-Kniazeva/', lang)}>{label}</a>
+            })}
+        </div>
     </div>
 </aside>

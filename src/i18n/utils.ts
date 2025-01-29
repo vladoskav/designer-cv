@@ -7,7 +7,7 @@ export function useTranslatedPath(lang: keyof typeof config) {
 }
 
 export function getLangFromUrl(url: URL) {
-    const [, lang] = url.pathname.split('/');
+    const [,, lang] = url.pathname.split('/');
     if (lang in config) return lang as keyof typeof config;
     return defaultLang;
 }
