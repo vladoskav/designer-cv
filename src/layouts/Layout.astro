@@ -6,13 +6,13 @@ const lang = getLangFromUrl(Astro.url);
 <html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/Ekaterina-Kniazeva/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Ekaterina Kniazeva</title>
 	</head>
 	<body>
-	<main class="flex w-full h-full gap-30 pl-7 relative overflow-hidden">
+	<main class="flex w-full h-full gap-37 pl-7 relative overflow-hidden max-md:flex-col max-md:gap-4 max-md:overflow-visible">
 		<slot />
 	</main>
 	</body>

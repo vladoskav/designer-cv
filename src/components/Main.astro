@@ -11,10 +11,10 @@ const cases = [
     {image: SecondCase, description: t('secondCaseDescr'), icon: 'avito', position: t('firstPosition')},
 ]
 ---
-<main class="flex w-full w-[calc(100vw - 20rem)] h-auto overflow-scroll pr-7 py-7 scroll-smooth">
+<section class="flex w-full h-auto overflow-scroll pr-7 py-7 scroll-smooth max-md:overflow-visible">
     <div class="flex w-full flex-col gap-30">
         {cases.map(({image, description, icon, position}) => {
             return <Case description={description} image={image} icon={icon} position={position}/>
         })}
     </div>
-</main>
+</section>

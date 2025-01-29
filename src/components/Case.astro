@@ -10,9 +10,9 @@ const IconComponent = IconsMap[icon]
 
 ---
 <div class="flex flex-col gap-8 justify-center text-xl">
-    <Image src={image} class="object-cover object-center w-full" alt="First Case"/>
-    <div class="pl-28">
-        <p class="tracking-[3.5%] leading-tight max-w-xl mb-5">{description}</p>
+    <Image src={image} class="object-cover object-center w-full" alt={icon}/>
+    <div class="pl-28 max-md:pl-0">
+        <p class="tracking-[3.5%] leading-tight max-w-xl mb-5 max-md:max-w-none">{description}</p>
         <div class="flex gap-1.5 items-center size text-base leading-tight tracking-[3.5%] text-[#C2C2C2]">
             <IconComponent />
             {position}
