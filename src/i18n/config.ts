@@ -14,7 +14,8 @@ export const config = {
         'tg': 'Telegram',
         'firstCaseDescr': 'NDA project. Integration with a partner who already has  a ' +
             'financial product license to measure demand for financial products and test using an A/B entry point.',
-        'firstPosition': 'Product Designer, Avito Fintech, 2024'
+        'firstPosition': 'Product Designer, Avito Fintech, 2024',
+        'secondCaseDescr': 'Complete service redesign for the Billing team. The new service consists of three blocks — all services, service details and service creation with a step-by-step form.'
     },
     ru: {
         'name': 'Екатерина Князева',

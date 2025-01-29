@@ -10,7 +10,7 @@ export default defineConfig({
         plugins: [tailwindcss()],
     },
     site: 'https://vladoskav.github.io',
-    base: '/',
+    base: '/Ekaterina-Kniazeva',
     experimental: {
         svg: true,
     },

@@ -2,7 +2,7 @@ import {config, defaultLang, showDefaultLang} from './config';
 
 export function useTranslatedPath(lang: keyof typeof config) {
     return function translatePath(path: string, l: string = lang) {
-        return !showDefaultLang && l === defaultLang ? path : `/${l}${path}`
+        return !showDefaultLang && l === defaultLang ? path : `${path}${l}`
     }
 }
 
