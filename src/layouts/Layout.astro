@@ -2,15 +2,16 @@
 import {getLangFromUrl} from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const pageTitle = lang === 'en' ? 'Ekaterina Kniazeva' : 'Екатерина Князева'
+const pageDescription = lang === 'en' ? 'Product Designer, UX/UI' : 'Продуктовый дизайнер, UX/UI'
 ---
 <!doctype html>
-<html lang={lang} class="dark">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/designer-cv/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Product Designer, UX/UI, CV, Resume, Portfolio" />
+		<meta name="description" content={pageDescription} />
 		<title>{pageTitle}</title>
 		<script>
 			if (
