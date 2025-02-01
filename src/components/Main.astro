@@ -2,19 +2,43 @@
 import Case from "./Case.astro";
 import {useTranslations} from "../i18n/utils";
 import {getLangFromUrl} from "../i18n/utils";
-import FirstCase from '../assets/first_case.png';
-import SecondCase from '../assets/second_case.png';
+import AvitoFirst from '../assets/avito-first.png';
+import AvitoSecond from '../assets/avito-second.png';
+import AvitoThird from '../assets/avito-third.png';
+import AvitoFourth from '../assets/avito-fourth.png';
 const language = getLangFromUrl(Astro.url);
 const t = useTranslations(language);
 const cases = [
-    {image: FirstCase, description: t('firstCaseDescr'), icon: 'avito', position: t('firstPosition')},
-    {image: SecondCase, description: t('secondCaseDescr'), icon: 'avito', position: t('firstPosition')},
+    {image: AvitoFirst, description: t('firstCaseDescr'), icon: 'avito', position: t('avitoPosition')},
+    {
+        image: AvitoSecond,
+        description: t('secondCaseDescr'),
+        icon: 'avito',
+        position: t('avitoPosition'),
+    },{
+        image: AvitoThird,
+        description: t('thirdCaseDescr'),
+        icon: 'avito',
+        position: t('avitoPosition'),
+    },{
+        image: AvitoFourth,
+        description: t('fourthCaseDescr'),
+        icon: 'avito',
+        position: t('avitoPosition'),
+    },
 ]
 ---
-<section class="flex w-full h-auto overflow-scroll pr-7 py-7 scroll-smooth max-md:overflow-visible">
-    <div class="flex w-full flex-col gap-30">
+<section class="flex w-full h-auto overflow-scroll flex-col items-center pr-7 py-7 scroll-smooth max-md:overflow-visible">
+    <div class="flex w-full flex-col gap-30 mb-10">
         {cases.map(({image, description, icon, position}) => {
-            return <Case description={description} image={image} icon={icon} position={position}/>
+            return <Case description={description} image={image} icon={icon} position={position} />
         })}
     </div>
+    <p>
+        created by
+        <a href="https://github.com/vladoskav/Ekaterina-Kniazeva" target="_blank"
+           class="hover:text-[#C2C2C2] underline transition-colors w-fit">
+            vladoskav
+        </a>
+    </p>
 </section>
