@@ -18,7 +18,7 @@ export default defineConfig({
         },
     },
     site: 'https://vladoskav.github.io',
-    base: '/Ekaterina-Kniazeva',
+    base: '/designer-cv',
     experimental: {
         svg: true,
         responsiveImages: true
