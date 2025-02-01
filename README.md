@@ -1,48 +1,17 @@
-# Astro Starter Kit: Basics
+# Ekaterina Kniazeva Designer Portfolio
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Project Overview
+This project is a website developed using the **Astro framework**, with a strong focus on high performance, accessibility, and adherence to web development best practices. The Lighthouse audit results demonstrate the successful optimization of the site.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+![readme.png](readme.png)
+## Lighthouse Results
+- **Performance:** 100
+- **Accessibility:** 93
+- **Best Practices:** Followed
+- **SEO:** Optimized
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Key Features
+- **Performance Optimization:** Achieved a perfect score, ensuring fast loading times and efficient resource management, leveraging Astro's static site generation capabilities.
+- **Accessibility:** Scored 93, with potential improvements identified in color contrast. The design choice to maintain the `#c2c2c2` color was prioritized for visual consistency.
+- **Best Practices:** Rigorous adherence to web development standards to ensure a robust and maintainable codebase.
+- **SEO:** Implemented best practices to enhance search engine visibility and ranking, utilizing Astro's SEO-friendly features.
