@@ -7,13 +7,13 @@ const IconsMap: Record<string, any> = {
 } as const
 const IconComponent = IconsMap[icon]
 ---
-<div class="flex flex-col gap-7 justify-center text-xl last:pb-7">
+<div class="flex flex-col gap-7 justify-center text-[1.3125rem] last:pb-7">
     <div class="w-full">
         <Image layout="responsive" src={image} class="object-cover object-center w-full dark:hidden" alt={icon}/>
         {darkThemeImage && <Image layout="responsive" src={darkThemeImage} class="object-cover object-center w-full hidden dark:block" alt={icon}/>}
     </div>
     <div class="pl-28 max-md:pl-0">
-        <p class="tracking-[3.5%] leading-tight max-w-xl mb-5 max-md:max-w-none">{description}</p>
+        <p class="tracking-[3.5%] leading-6 max-w-xl mb-5 max-md:max-w-none">{description}</p>
         <div class="flex gap-1.5 items-center size text-base leading-tight tracking-[3.5%] text-[#C2C2C2]">
             <IconComponent/>
             {position}

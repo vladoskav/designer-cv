@@ -14,13 +14,13 @@ const langToChoose = language === 'ru' ? 'en' : 'ru';
 
 </script>
 
-<aside class="max-w-58 max-md:max-w-none w-full h-vh text-xl sticky top-0 left-0 py-7 max-md:pr-7 max-md:static">
+<aside class="max-w-58 max-md:max-w-none w-full h-vh text-[1.3125rem] sticky top-0 left-0 py-7 max-md:pr-7 max-md:static">
     <Image alt="Avatar" src={Avatar} formats={['webp', 'jpg']}
            class="rounded-full size-16 mb-5 object-cover object-top"/>
     <h1 class="text-3xl tracking-[3.5%] leading-none font-bold mb-4">{t('name')}</h1>
-    <p class="tracking-[3.5%] leading-tight mb-4 max-md:mb-1">{t('about')}</p>
-    <p class="tracking-[3.5%] leading-tight max-md:mb-4">{t('subAbout')}</p>
-    <div class="flex w-full absolute bottom-7 left-0 justify-end gap-2 flex-col max-md:justify-normal leading-tight max-md:static">
+    <p class="tracking-[3.5%] leading-6 mb-4 max-md:mb-1">{t('about')}</p>
+    <p class="tracking-[3.5%] leading-6 max-md:mb-4">{t('subAbout')}</p>
+    <div class="flex w-full absolute bottom-7 left-0 justify-end gap-2 flex-col max-md:justify-normal leading-6 max-md:static">
         <a href="https://hh.ru" target="_blank" class="hover:text-[#C2C2C2] transition-colors w-fit">{t('resume')}</a>
         <a href="https://t.me/@catheraneu" target="_blank"
            class="mb-10 max-md:mb-2 hover:text-[#C2C2C2] transition-colors w-fit">{t('tg')}</a>
