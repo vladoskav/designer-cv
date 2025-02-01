@@ -3,9 +3,13 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
-    font-family: 'SFProDisplay';
+    font-family: 'SF Pro Display';
     src: url('/designer-cv/fonts/SFPRODISPLAY_regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+}
+
+@theme {
+    --font-display: "SF Pro Display", "ui-sans-serif", "system-ui";
 }
