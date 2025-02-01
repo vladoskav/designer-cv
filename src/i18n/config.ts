@@ -23,7 +23,10 @@ export const config = {
             'project for the Central Bank aimed at obtaining regulatory approval.' +
             ' Collaborated closely with legal experts and editors to ensure compliance and accuracy throughout the process.',
         'fourthCaseDescr': 'NDA. Partner integration for measuring demand for financial products ' +
-            'and testing entry points using A/B testing.'
+            'and testing entry points using A/B testing.',
+        'fifthCaseDescr': 'Concept: Creating a new entry point to improve the Adoption Rate metric, with low task decomposition.',
+        'dark': 'Dark',
+        'light': 'Light',
     },
     ru: {
         'name': 'Екатерина Князева',
@@ -39,6 +42,9 @@ export const config = {
         'thirdCaseDescr': 'Проект под NDA.' +
             ' Важный проект для Центрального банка для получения разрешения. Работа в связке с юристами, редакторами.',
         'fourthCaseDescr': 'Проект под NDA. ' +
-            'Интеграция с партнёром для измерения спроса на финансовые продукты и тестирования точек входа с помощью а/б.'
+            'Интеграция с партнёром для измерения спроса на финансовые продукты и тестирования точек входа с помощью а/б.',
+        'fifthCaseDescr': 'Концепт. Формирование новой точки входа для повышения метрики Adoption Rate, низкая декомпозиция задачи.',
+        'dark': 'Тёмная',
+        'light': 'Светлая',
     }
 } as const;

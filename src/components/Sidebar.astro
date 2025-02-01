@@ -1,12 +1,14 @@
 ---
 import {Image} from 'astro:assets';
 import Avatar from '../assets/avatar.jpg'
+import ThemeToggler from './ThemeToggler.astro'
 import {getLangFromUrl, useTranslatedPath, useTranslations} from '../i18n/utils';
 import {languages} from "../i18n/config";
 
 const language = getLangFromUrl(Astro.url);
 const t = useTranslations(language);
 const translatePath = useTranslatedPath(language);
+const langToChoose = language === 'ru' ? 'en' : 'ru';
 ---
 <script>
 
@@ -23,10 +25,10 @@ const translatePath = useTranslatedPath(language);
         <a href="https://t.me/@catheraneu" target="_blank"
            class="mb-10 max-md:mb-2 hover:text-[#C2C2C2] transition-colors w-fit">{t('tg')}</a>
         <div class="flex gap-7 items-center">
-            {Object.entries(languages).map(([lang, label]) => {
-                return <a class={`${language === lang && 'text-[#C2C2C2]'} hover:text-[#C2C2C2] transition-colors`}
-                          href={translatePath('/designer-cv/', lang)}>{label}</a>
-            })}
+            <a class="hover:text-[#C2C2C2] transition-colors"
+               href={translatePath('/designer-cv/', langToChoose)}>{languages[langToChoose]}
+            </a>
+            <ThemeToggler />
         </div>
     </div>
 </aside>

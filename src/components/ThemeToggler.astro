@@ -1,0 +1,20 @@
+---
+import {getLangFromUrl, useTranslations} from "../i18n/utils";
+const language = getLangFromUrl(Astro.url);
+const t = useTranslations(language)
+---
+<script>
+    document.getElementById('theme-toggler')?.addEventListener('click', () => {
+        if (localStorage.theme === 'dark') {
+            localStorage.theme = 'light';
+            document.documentElement.classList.remove('dark');
+        } else {
+            localStorage.theme = 'dark';
+            document.documentElement.classList.add('dark');
+        }
+    });
+</script>
+<button class="cursor-pointer hover:text-[#C2C2C2] transition-colors" type="button" id="theme-toggler">
+    <span class="hidden dark:inline">{t('light')}</span><span class="dark:hidden">{t('dark')}</span>
+</button>
+

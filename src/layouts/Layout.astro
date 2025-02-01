@@ -1,19 +1,30 @@
 ---
 import {getLangFromUrl} from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
+const pageTitle = lang === 'en' ? 'Ekaterina Kniazeva' : 'Екатерина Князева'
 ---
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} class="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/designer-cv/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content="Product Designer, UX/UI, CV, Resume, Portfolio" />
-		<title>Ekaterina Kniazeva</title>
+		<title>{pageTitle}</title>
+		<script>
+			if (
+				localStorage.theme === 'dark' ||
+				(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.remove('dark');
+			}
+		</script>
 	</head>
 	<body>
-	<main class="flex w-full h-full gap-37 pl-7 relative overflow-hidden max-md:flex-col max-md:gap-4 max-md:overflow-visible">
+	<main class="flex w-full h-full gap-37 pl-7 relative overflow-hidden max-md:flex-col max-md:gap-4 max-md:overflow-visible bg-white dark:bg-black text-black dark:text-white">
 		<slot />
 	</main>
 	</body>

@@ -1,7 +1,7 @@
 ---
 import {Image} from "astro:assets";
 import AvitoIcon from '../assets/avito.svg';
-const {description, image, icon, position} = Astro.props
+const {description, image, darkThemeImage, icon, position} = Astro.props
 const IconsMap: Record<string, any> = {
     avito: AvitoIcon,
 } as const
@@ -9,7 +9,8 @@ const IconComponent = IconsMap[icon]
 ---
 <div class="flex flex-col gap-7 justify-center text-xl last:pb-7">
     <div class="w-full">
-        <Image layout="responsive" src={image} class="object-cover object-center w-full" alt={icon}/>
+        <Image layout="responsive" src={image} class="object-cover object-center w-full dark:hidden" alt={icon}/>
+        {darkThemeImage && <Image layout="responsive" src={darkThemeImage} class="object-cover object-center w-full hidden dark:block" alt={icon}/>}
     </div>
     <div class="pl-28 max-md:pl-0">
         <p class="tracking-[3.5%] leading-tight max-w-xl mb-5 max-md:max-w-none">{description}</p>

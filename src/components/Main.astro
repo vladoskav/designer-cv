@@ -3,35 +3,53 @@ import Case from "./Case.astro";
 import {useTranslations} from "../i18n/utils";
 import {getLangFromUrl} from "../i18n/utils";
 import AvitoFirst from '../assets/avito-first.png';
+import DarkAvitoFirst from '../assets/dark-avito-first.png';
+import DarkAvitoSecond from '../assets/dark-avito-second.png';
 import AvitoSecond from '../assets/avito-second.png';
 import AvitoThird from '../assets/avito-third.png';
 import AvitoFourth from '../assets/avito-fourth.png';
+import AvitoFifth from '../assets/avito-fifth.png';
 const language = getLangFromUrl(Astro.url);
 const t = useTranslations(language);
 const cases = [
-    {image: AvitoFirst, description: t('firstCaseDescr'), icon: 'avito', position: t('avitoPosition')},
+    {
+        image: AvitoFirst,
+        darkThemeImage: DarkAvitoFirst,
+        description: t('firstCaseDescr'),
+        icon: 'avito',
+        position: t('avitoPosition')
+    },
     {
         image: AvitoSecond,
+        darkThemeImage: DarkAvitoSecond,
         description: t('secondCaseDescr'),
         icon: 'avito',
         position: t('avitoPosition'),
-    },{
+    }, {
         image: AvitoThird,
         description: t('thirdCaseDescr'),
         icon: 'avito',
         position: t('avitoPosition'),
-    },{
+    }, {
         image: AvitoFourth,
         description: t('fourthCaseDescr'),
         icon: 'avito',
         position: t('avitoPosition'),
     },
+    {
+        image: AvitoFifth,
+        description: t('fifthCaseDescr'),
+        icon: 'avito',
+        position: t('avitoPosition'),
+    },
 ]
 ---
-<section class="flex w-full h-auto overflow-scroll flex-col items-center pr-7 py-7 scroll-smooth max-md:overflow-visible">
+<section
+        class="flex w-full h-auto overflow-scroll flex-col items-center pr-7 py-7 scroll-smooth max-md:overflow-visible">
     <div class="flex w-full flex-col gap-30 mb-10">
-        {cases.map(({image, description, icon, position}) => {
-            return <Case description={description} image={image} icon={icon} position={position} />
+        {cases.map(({image, darkThemeImage, description, icon, position}) => {
+            return <Case description={description} image={image} darkThemeImage={darkThemeImage} icon={icon}
+                          position={position}/>
         })}
     </div>
     <p>
