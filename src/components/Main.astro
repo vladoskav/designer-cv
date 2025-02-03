@@ -45,14 +45,14 @@ const cases = [
 ]
 ---
 <section
-        class="flex w-full h-auto overflow-scroll text-[1.4375rem] tracking-[0.035em] font-light leading-6 flex-col pr-7 py-7 scroll-smooth max-md:overflow-visible">
+        class="flex w-full h-auto overflow-scroll text-[1.375rem] tracking-[0.035em] font-light leading-6 flex-col pr-7 py-7 scroll-smooth max-md:overflow-visible">
     <div class="flex w-full flex-col gap-30 mb-10">
         {cases.map(({image, darkThemeImage, description, icon, position}) => {
             return <Case description={description} image={image} darkThemeImage={darkThemeImage} icon={icon}
                           position={position}/>
         })}
     </div>
-    <p class="pl-28 max-md:pl-0">
+    <p class="pl-28 text-sm max-md:pl-0">
         created by
         <a href="https://github.com/vladoskav/designer-cv" target="_blank"
            class="hover:text-[#C2C2C2] underline transition-colors w-fit">
