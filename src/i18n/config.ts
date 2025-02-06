@@ -14,7 +14,8 @@ export const config = {
         'tg': 'Telegram',
         'firstCaseDescr': 'NDA. Crafting the target vision for Avito Card:' +
             ' from transaction history and QR code payments to card reissuance and freezing.',
-        'avitoPosition': 'Product Designer, Avito Fintech, 2024',
+        'avitoPosition': 'Avito Fintech, Product Designer, 2024',
+        'avitoPositionThird': 'Avito Fintech, Product Designer, 2024 – 2025',
         'secondCaseDescr': 'NDA. A service for the Billing team.' +
             ' The new service comprises several modules, including an all-services overview,' +
             ' service details, and a service creation' +
@@ -40,7 +41,8 @@ export const config = {
         'tg': 'Телеграм',
         'firstCaseDescr': 'NDA. Формирование целевого вижена Авито Карты: от истории операций,' +
             ' оплаты по QR-коду до перевыпуска и заморозки.',
-        'avitoPosition': 'Продуктовый дизайнер, Avito Fintech, 2024',
+        'avitoPosition': 'Avito Fintech, Продуктовый дизайнер, 2024',
+        'avitoPositionThird': 'Avito Fintech, Продуктовый дизайнер, 2024 – 2025',
         'secondCaseDescr': 'NDA. Cервиc для команды Биллинга.' +
             ' Новый сервис состоит из блоков — все услуги, детали услуги и создание услуги с пошаговой формой.',
         'thirdCaseDescr': 'NDA.' +
