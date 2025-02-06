@@ -25,8 +25,12 @@ export const config = {
         'fourthCaseDescr': 'NDA. Partner integration for measuring demand for financial products ' +
             'and testing entry points using A/B testing.',
         'fifthCaseDescr': 'Concept: Creating a new entry point to improve the Adoption Rate metric, with low task decomposition.',
+        'sixthCaseDescr': 'NDA. Creating the architecture and design of a website for a well-known Russian fashion designer.',
+        'seventhCaseDescr': 'Participation in weekly design workouts. Result: ranked in the top 10 out of 2,000 participants and advanced to the FinTech cluster.',
         'dark': 'Dark',
         'light': 'Light',
+        'markWeberPosition': 'Mark Weber, 2023 – 2024',
+        'avitoPositionSecond': 'Detepr Design Workout, 2024'
     },
     ru: {
         'name': 'Екатерина Князева',
@@ -44,7 +48,11 @@ export const config = {
         'fourthCaseDescr': 'NDA. ' +
             'Интеграция с партнёром для измерения спроса на финансовые продукты и тестирования точек входа с помощью а/б.',
         'fifthCaseDescr': 'Концепт. Формирование новой точки входа для повышения метрики Adoption Rate, низкая декомпозиция задачи.',
+        'sixthCaseDescr': 'NDA. Создание архитектуры и дизайна сайта для известного российского дизайнера одежды.',
+        'seventhCaseDescr': 'Участие в еженедельных дизайн-воркаутах. Результат: вошла в топ 10 из 2000 участников и прошла в кластер Финтеха.',
         'dark': 'Тёмная',
         'light': 'Светлая',
+        'markWeberPosition': 'Mark Weber, 2023 – 2024',
+        'avitoPositionSecond': 'Detepr Design Workout, 2024'
     }
 } as const;

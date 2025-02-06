@@ -5,10 +5,17 @@ import {getLangFromUrl} from "../i18n/utils";
 import AvitoFirst from '../assets/avito-first.png';
 import DarkAvitoFirst from '../assets/dark-avito-first.png';
 import DarkAvitoSecond from '../assets/dark-avito-second.png';
+import DarkAvitoThird from '../assets/dark-avito-third.png';
+import DarkAvitoFourth from '../assets/dark-avito-fourth.png';
+import DarkAvitoFifth from '../assets/dark-avito-fifth.png';
+import DarkDesign from '../assets/dark-design.png';
+import DarkAvitoSixth from '../assets/dark-avito-sixth.png';
 import AvitoSecond from '../assets/avito-second.png';
 import AvitoThird from '../assets/avito-third.png';
 import AvitoFourth from '../assets/avito-fourth.png';
 import AvitoFifth from '../assets/avito-fifth.png';
+import AvitoSixth from '../assets/avito-sixth.png';
+import Design from '../assets/design.png';
 const language = getLangFromUrl(Astro.url);
 const t = useTranslations(language);
 const cases = [
@@ -27,20 +34,37 @@ const cases = [
         position: t('avitoPosition'),
     }, {
         image: AvitoThird,
+        darkThemeImage: DarkAvitoThird,
         description: t('thirdCaseDescr'),
         icon: 'avito',
         position: t('avitoPosition'),
     }, {
         image: AvitoFourth,
+        darkThemeImage: DarkAvitoFourth,
         description: t('fourthCaseDescr'),
         icon: 'avito',
         position: t('avitoPosition'),
     },
     {
         image: AvitoFifth,
+        darkThemeImage: DarkAvitoFifth,
         description: t('fifthCaseDescr'),
         icon: 'avito',
         position: t('avitoPosition'),
+    },
+    {
+        image: Design,
+        darkThemeImage: DarkDesign,
+        description: t('sixthCaseDescr'),
+        icon: 'markWeber',
+        position: t('markWeberPosition'),
+    },
+    {
+        image: AvitoSixth,
+        darkThemeImage: DarkAvitoSixth,
+        description: t('seventhCaseDescr'),
+        icon: 'avito',
+        position: t('avitoPositionSecond'),
     },
 ]
 ---
