@@ -8,8 +8,8 @@ export const languages = {
 export const config = {
     en: {
         'name': 'Ekaterina Kniazeva',
-        'about': 'Product designer with over 3 years of experience in mobile and web products.',
-        'subAbout': 'I currently work in the Avito Fintech cluster.',
+        'about': 'Product designer with over 3 years of experience in mobile and web products.',
+        'subAbout': 'I currently work in Avito Fintech cluster.',
         'resume': 'CV',
         'tg': 'Telegram',
         'firstCaseDescr': 'NDA. Crafting the target vision for Avito Card:' +

@@ -69,8 +69,8 @@ const cases = [
 ]
 ---
 <section
-        class="flex w-full h-auto overflow-scroll text-[1.375rem] tracking-[0.035em] font-light leading-6 flex-col pr-7 py-7 scroll-smooth max-md:overflow-visible">
-    <div class="flex w-full flex-col gap-30 mb-10">
+        class="flex w-full h-auto overflow-scroll text-[1.375rem] max-md:text-lg tracking-[0.035em] font-light leading-6 flex-col pr-7 py-7 scroll-smooth max-md:overflow-visible">
+    <div class="flex w-full flex-col gap-30 max-md:gap-[15vw] mb-10">
         {cases.map(({image, darkThemeImage, description, icon, position}) => {
             return <Case description={description} image={image} darkThemeImage={darkThemeImage} icon={icon}
                           position={position}/>
